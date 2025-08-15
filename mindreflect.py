@@ -33,7 +33,7 @@ mood_map = {"Happy": 5,
             "Angry": 1}
 
 # Sidebar navigation
-selection = st.sidebar.selectbox("Go to", ["Home", "Journal", "Focus Timer", "Mood History", "Settings"])
+selection = st.sidebar.selectbox("Go to", ["Home", "Journal", "Focus Timer", "Mood History"])
 
 if "sentiment_pipeline" not in st.session_state:
     st.session_state.sentiment_pipeline = pipeline("sentiment-analysis")
@@ -175,3 +175,4 @@ elif selection == "Mood History":
         st.subheader("Line Graph:")
 
         st.line_chart(df.set_index("Datetime")["Score"])
+
