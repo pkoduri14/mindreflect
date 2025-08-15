@@ -20,7 +20,7 @@ def get_mood_score(entry):
     else:
         return mood_map.get(entry["mood"])
 
-genai.configure(api_key = GEMINI_KEY)
+genai.configure(api_key = st.secrets["GEMINI_KEY"])
 st.set_page_config(page_title = "MindReflect", layout = "centered")
 
 st.sidebar.image("logo.png", use_container_width=True)
@@ -173,4 +173,5 @@ elif selection == "Mood History":
         st.dataframe(df.sort_values(by = "Datetime", ascending = False))
 
         st.subheader("Line Graph:")
+
         st.line_chart(df.set_index("Datetime")["Score"])
