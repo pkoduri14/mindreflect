@@ -1,1 +1,2 @@
-# mindreflect
+  # MindReflect
+  ## Reflect. Refine. Refocus.
