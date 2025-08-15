@@ -149,7 +149,7 @@ elif selection == "Focus Timer":
             st.success("Time's up! Time to take a break.")
             st.session_state.start_time = None
     
-    st_autorefresh(interval = 1000, key = "focus_tim_ref")
+    st_autorefresh(interval = 2000, key = "focus_tim_ref")
 
 elif selection == "Mood History":
     st.title("Mood History")
@@ -175,4 +175,5 @@ elif selection == "Mood History":
         st.subheader("Line Graph:")
 
         st.line_chart(df.set_index("Datetime")["Score"])
+
 
