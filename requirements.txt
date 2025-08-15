@@ -3,3 +3,4 @@ streamlit_autorefresh
 transformers
 google.generativeai
 pandas
+torch
