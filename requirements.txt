@@ -1,0 +1,7 @@
+streamlit
+streamlit_autorefresh
+transformers
+google.generativeai
+datetime
+time
+pandas
